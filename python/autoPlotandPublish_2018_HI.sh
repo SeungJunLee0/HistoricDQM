@@ -30,7 +30,7 @@ echo "      --->>> STREAMEXPRESS <<<---"
 subT=`date`
 echo "      --->>> Strip DECO Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY_DECO.txt &> "${LOGDIR}/expressStripDECO.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY_DECO.txt &> "${LOGDIR}/expressStripDECO.log"
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/StreamExpress/Strips/DECO/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/StreamExpress/Strips/DECO/
 cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/StreamExpress/Strips/DECO/
@@ -41,7 +41,7 @@ echo "      --->>> Strip DECO Ended at ${subT}"
 subT=`date`
 echo "      --->>> Strip PEAK Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY_PEAK.txt &> "${LOGDIR}/expressStripPEAK.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY_PEAK.txt &> "${LOGDIR}/expressStripPEAK.log"
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/StreamExpress/Strips/PEAK/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/StreamExpress/Strips/PEAK/
 cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/StreamExpress/Strips/PEAK/
@@ -52,7 +52,7 @@ echo "      --->>> Strip PEAK Ended at ${subT}"
 subT=`date`
 echo "      --->>> Strip ALL Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY.txt &> "${LOGDIR}/expressStripALL.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPExpressStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset StreamExpress --dataset StreamHIExpress --epoch Run2018 --epoch HIRun2018 --epoch Commissioning2018 -r "run >= 290129" --reco Express -J json_DCSONLY.txt &> "${LOGDIR}/expressStripALL.log"
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/StreamExpress/Strips/ALL/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/StreamExpress/Strips/ALL/
 cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/StreamExpress/Strips/ALL/
@@ -124,7 +124,7 @@ echo "      --->>> ZEROBIAS <<<---"
 subT=`date`
 echo "      --->>> Strip DECO Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY_DECO.txt &> "${LOGDIR}/promptStripDECO.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY_DECO.txt &> "${LOGDIR}/promptStripDECO.log"
 python ./HDQMInefficientModules.py
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/Prompt/ZeroBias/Strips/DECO/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/Prompt/ZeroBias/Strips/DECO/
@@ -136,7 +136,7 @@ echo "      --->>> Strip DECO Ended at ${subT}"
 subT=`date`
 echo "      --->>> Strip PEAK Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY_PEAK.txt  &> "${LOGDIR}/promptStripPEAK.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY_PEAK.txt  &> "${LOGDIR}/promptStripPEAK.log"
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/Prompt/ZeroBias/Strips/PEAK/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/Prompt/ZeroBias/Strips/PEAK/
 cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/Prompt/ZeroBias/Strips/PEAK/
@@ -147,7 +147,7 @@ echo "      --->>> Strip PEAK Ended at ${subT}"
 subT=`date`
 echo "      --->>> Strip ALL Started at ${subT}"
 rm -rf ./JSON/*
-python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY.txt &> "${LOGDIR}/promptStripALL.log"
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco Prompt -J json_DCSONLY.txt &> "${LOGDIR}/promptStripALL.log"
 python ./HDQMInefficientModules.py
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/Prompt/ZeroBias/Strips/ALL/
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/Prompt/ZeroBias/Strips/ALL/
@@ -191,6 +191,89 @@ python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptRecoErrors.ini -
 cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/Prompt/ZeroBias/RecoErrors/ 
 cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/Prompt/ZeroBias/RecoErrors/ 
 cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/Prompt/ZeroBias/RecoErrors/ 
+touch .donePromptRecoErrors
+subT=`date`
+echo "      --->>> RecoErrors Ended at ${subT}"
+
+
+# ++++++++++++++++++++++++++++++++   ReReco   +++++++++++++++++++++++++++++++++++++++
+echo " "
+echo " "
+echo " "
+echo "      --->>> ReReco <<<---"
+
+
+#ZeroBias STRIPS
+subT=`date`
+echo "      --->>> Strip DECO Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco 17Sep2018 -J json_DCSONLY_DECO.txt &> "${LOGDIR}/rerecoStripDECO.log"
+python ./HDQMInefficientModules.py
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/Strips/DECO/
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/Strips/DECO/
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/Strips/DECO/
+touch .doneZeroBias
+subT=`date`
+echo "      --->>> Strip DECO Ended at ${subT}"
+
+subT=`date`
+echo "      --->>> Strip PEAK Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco 17Sep2018 -J json_DCSONLY_PEAK.txt  &> "${LOGDIR}/rerecoStripPEAK.log"
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/Strips/PEAK/
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/Strips/PEAK/
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/Strips/PEAK/
+touch .doneZeroBias
+subT=`date`
+echo "      --->>> Strip PEAK Ended at ${subT}"
+
+subT=`date`
+echo "      --->>> Strip ALL Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptStrips.ini -C cfg/trendPlotsStrip_General_2015.ini -C cfg/trendPlotsStrip_TEC_2015.ini -C cfg/trendPlotsStrip_TID_2015.ini -C cfg/trendPlotsStrip_TIB.ini -C cfg/trendPlotsStrip_TOB.ini -C cfg/trendPlotsStripG2.ini -C cfg/trendPlotsStrip_StoN.ini -C cfg/trendPlotsStrip_Number_APVShots.ini -C cfg/trendPlotsStrip_TIB_Residuals.ini -C cfg/trendPlotsStrip_TOB_Residuals.ini -C cfg/trendPlotsStrip_TEC_Minus_Residuals.ini -C cfg/trendPlotsStrip_TEC_Plus_Residuals.ini -C cfg/trendPlotsStrip_TID_Minus_Residuals.ini -C cfg/trendPlotsStrip_TID_Plus_Residuals.ini  -C cfg/trendPlotsStrip_StoN_TOB.ini  -C cfg/trendPlotsStrip_StoN_TIB.ini -C cfg/trendPlotsStrip_StoN_TEC_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TEC_MINUS.ini -C cfg/trendPlotsStrip_StoN_TID_PLUS.ini  -C cfg/trendPlotsStrip_StoN_TID_MINUS.ini -C cfg/trendPlotsStrip_BadComponents.ini -C cfg/trendPlotsStrip_FEerror.ini -C cfg/trendPlotsStrip_ClustersNoise_TOB.ini -C cfg/trendPlotsStrip_ClustersNoise_TIB.ini -C cfg/trendPlotsStrip_ClustersNoise_TEC_MINUS.ini  -C cfg/trendPlotsStrip_ClustersNoise_TEC_PLUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_MINUS.ini -C cfg/trendPlotsStrip_ClustersNoise_TID_PLUS.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco 17Sep2018 -J json_DCSONLY.txt &> "${LOGDIR}/rerecoStripALL.log"
+python ./HDQMInefficientModules.py
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/Strips/ALL/
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/Strips/ALL/
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/Strips/ALL/
+touch .doneZeroBias
+subT=`date`
+echo "      --->>> Strip ALL Ended at ${subT}"
+
+#ZeroBias PIXEL
+subT=`date`
+echo "      --->>> Pixel Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptPixel.ini -C cfg/trendPlotsPixelPhase1_clustersV3.ini -C cfg/trendPlotsPixelPhase1_FED.ini -C cfg/trendPlotsPixelPhase1_ADCDIGI.ini -C cfg/trendPlotsPixelPhase1_BPIX_Residuals.ini -C cfg/trendPlotsPixelPhase1_FPIX_Residuals.ini -C cfg/trendPlotsPixelPhase1_clustersBPIX_v2.ini -C cfg/trendPlotsPixelPhase1_clustersFPIX_v2.ini -C cfg/trendPlotsPixelPhase1_HitsEfficiency.ini -C cfg/trendPlotsPixelPhase1_DigiCluster.ini -C cfg/trendPlotsPixelPhase1_clustersFPIX_test.ini -C cfg/trendPlotsPixelPhase1_clustersFPixByRing.ini -C cfg/trendPlotsPixelPhase1_clustersBPixByModule.ini -C cfg/trendPlotsPixelPhase1_deadROC.ini -C cfg/trendPlotsPixelPhase1_DamagedL2Module.ini -C cfg/trendPlotsPixelPhase1_DamagedL4Module.ini -C cfg/trendPlotsPixelPhase1_DamagedL3Module.ini -C cfg/trendPlotsPixelPhase1_DamagedRing2Module.ini -C cfg/trendPlotsPixelPhase1_DamagedRing1Module.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 292505" --reco 17Sep2018 -J json_DCSONLY.txt  &> "${LOGDIR}/rerecoPixel.log"
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/PixelPhase1/
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/PixelPhase1/
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/PixelPhase1/
+touch .doneZeroBiasPixel
+subT=`date`
+echo "      --->>> Pixel Ended at ${subT}"
+
+
+#ZeroBias TRACKING
+subT=`date`
+echo "      --->>> Tracking Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptTracking.ini -C cfg/trendPlotsTracking.ini -C cfg/trendPlotsAlignment.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -r "run >= 290129" --reco 17Sep2018 -J json_DCSONLY.txt &> "${LOGDIR}/rerecoTracking.log"
+python ./MakeRatioJSON.py -n NumberOfTrack_mean -d NumberofPVertices_mean -f TrkOverPVertices_ratio -t TrkOverPVertices_ratio
+python MakeIncremental.py -h ./JSON/ -i NumberOfALCARecoTracks -o IncrementalNumberOfALCARecoTracks -t "Incremental Number of ALCA Reco Tracks"
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/Tracking/
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/Tracking/
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/Tracking/
+touch .doneZeroBiasTracking
+subT=`date`
+echo "      --->>> Tracking Ended at ${subT}"
+
+#ZeroBias RecoError
+subT=`date`
+echo "      --->>> RecoErrors Started at ${subT}"
+rm -rf ./JSON/*
+python ./trendPlots_2018_HI.py -C cfg/trendPlotsDQM_cronPPPromptRecoErrors.ini -C cfg/trendPlotsRECOErrors2017.ini --dataset ZeroBias --dataset HIMinimumBias0 --epoch Run2018 --epoch Commissioning2018 --epoch HIRun2018 -J json_DCSONLY.txt --reco 17Sep2018 &> "${LOGDIR}/rerecoRECOerrors.log"
+cp ./JSON/* /data/users/event_display/HDQM/v3.1/alljsons/2018/ReReco/RecoErrors/ 
+cp ./JSON/* /data/users/event_display/HDQM/v4/alljsons/2018/ReReco/RecoErrors/ 
+cp ./JSON/* /data/users/event_display/HDQM/v3/alljsons/2018/ReReco/RecoErrors/ 
 touch .donePromptRecoErrors
 subT=`date`
 echo "      --->>> RecoErrors Ended at ${subT}"

@@ -120,7 +120,7 @@ function update_url() {
 	if (apvMode == "" || apvMode === null || apvMode == "PEAK + DECO") {
 		urlLink = "/" + year + "/Prompt/" + dataSet + "/"
 			+ subsystem;
-		if (dataSet == "StreamExpress" || dataSet == "StreamExpressCosmics" || dataSet == "StreamExpressCosmicsCommissioning") {
+		if (dataSet == "StreamExpress" || dataSet == "StreamExpressCosmics" || dataSet == "StreamExpressCosmicsCommissioning" || dataSet == "ReReco") {
 			urlLink = "/" + year + "/" + dataSet + "/"
 				+ subsystem;
 		}
@@ -140,6 +140,9 @@ function update_url() {
 		} else if (dataSet == "CosmicsCommissioning") {
 			urlLink = "/" + year + "/Prompt/" + dataSet + "/"
 				+ subsystem + "/" + apvMode;
+		} else if (dataSet == "ReReco") {
+			urlLink = "/" + year + "/" + dataSet + "/"
+				+ subsystem + "/" + apvMode;		    
 		} else {
 			urlLink = "/" + year + "/Prompt/" + dataSet + "/"
 				+ subsystem + "/" + apvMode;
@@ -176,7 +179,7 @@ function update_collections() {
 
 function getCollectionName(dset,subsys,apv) {
     var name="";
-    if (dset == "ZeroBias"){
+    if (dset == "ZeroBias" || dset == "ReReco"){
 	if(subsys == "PixelPhase1") name="PixelPhase1";
 	else if(subsys == "Strips"){
 	    if(apv=="PEAK") name="StripPeak";

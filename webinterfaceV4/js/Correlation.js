@@ -1,5 +1,6 @@
 var year;
-var dataSet="";
+var dataSetX="";
+var dataSetY="";
 var apvMode;
 var subsystem;
 var colors = [];
@@ -115,27 +116,27 @@ function update_url() {
     //    console.log("dataset : "+dataSet);
 
     if(subsystemX=="Strips"){
-	urlLinkX = "/" + year + "/Prompt/" + dataSet + "/"+ subsystemX+"/DECO";
-	if (dataSet.includes("StreamExpress")){
-	    urlLinkX = "/" + year + "/" + dataSet + "/"+ subsystemX+"/DECO";
+	urlLinkX = "/" + year + "/Prompt/" + dataSetX + "/"+ subsystemX+"/DECO";
+	if (dataSetX.includes("StreamExpress") || dataSetX.includes("ReReco")){
+	    urlLinkX = "/" + year + "/" + dataSetX + "/"+ subsystemX+"/DECO";
 	}
     }
     else{
-	urlLinkX = "/" + year + "/Prompt/" + dataSet + "/"+ subsystemX;
-        if (dataSet.includes("StreamExpress")){
-            urlLinkX = "/" + year + "/" + dataSet + "/"+ subsystemX;
+	urlLinkX = "/" + year + "/Prompt/" + dataSetX + "/"+ subsystemX;
+        if (dataSetX.includes("StreamExpress") || dataSetX.includes("ReReco")){
+            urlLinkX = "/" + year + "/" + dataSetX + "/"+ subsystemX;
         }
     }
     if(subsystemY=="Strips"){
-	urlLinkY = "/" + year + "/Prompt/" + dataSet + "/"+ subsystemY+"/DECO";
-	if (dataSet.includes("StreamExpress")){
-	    urlLinkY = "/" + year + "/" + dataSet + "/"+ subsystemY+"/DECO";
+	urlLinkY = "/" + year + "/Prompt/" + dataSetY + "/"+ subsystemY+"/DECO";
+	if (dataSetY.includes("StreamExpress") || dataSetY.includes("ReReco")){
+	    urlLinkY = "/" + year + "/" + dataSetY + "/"+ subsystemY+"/DECO";
 	}
     }
     else{
-	urlLinkY = "/" + year + "/Prompt/" + dataSet + "/"+ subsystemY;
-        if (dataSet.includes("StreamExpress")){
-            urlLinkY = "/" + year + "/" + dataSet + "/"+ subsystemY;
+	urlLinkY = "/" + year + "/Prompt/" + dataSetY + "/"+ subsystemY;
+        if (dataSetY.includes("StreamExpress") || dataSetY.includes("ReReco")){
+            urlLinkY = "/" + year + "/" + dataSetY + "/"+ subsystemY;
         }
     }
     console.log("urlLink Xaxis: " + urlLinkX);
@@ -157,7 +158,7 @@ function update_collections() {
 
 function getCollectionName(dset,subsys) {
     var name="";
-    if (dset == "ZeroBias"){
+    if (dset == "ZeroBias" || dset == "ReReco"){
 	if(subsys == "PixelPhase1") name="PixelPhase1";
 	else if(subsys == "Strips") name="StripDeco";
 	else if(subsys == "Tracking") name="Tracking";
@@ -275,19 +276,18 @@ $(document).ready(
 		$("#subsystemY").prop("disabled",true);
 		$("#varsX").prop("disabled",true);
 		$("#varsY").prop("disabled",true);
-		$("#dataSet").change(
+		$("#dataSetX").change(
 		    function () {
 			if($("#subsystemX").is(':disabled') && $("#subsystemY").is(':disabled')){
 			    $("#subsystemX").prop("disabled",false);
-			    $("#subsystemY").prop("disabled",false);
 			}
 			else{
-			    dataSet = $("#dataSet").val();
+			    dataSetX = $("#dataSetX").val();
 			    subsystem = $("#subsystemX").val();
 			    $("#varsX").prop("disabled",false);
 			    $("#varsX").empty();
 			    name="";
-			    name=getCollectionName(dataSet,subsystem)
+			    name=getCollectionName(dataSetX,subsystem)
 				console.log("X collection : "+name);
 			    $.each(collections[name], function (i, c) {
 				    $.each(c.files, function(j, item){
@@ -296,11 +296,20 @@ $(document).ready(
 							    }));
 					});
 				});
+			}
+		    });
+		$("#dataSetY").change(
+		    function () {
+			if($("#subsystemY").is(':disabled')){
+			    $("#subsystemY").prop("disabled",false);
+			}
+			else{
+			    dataSetY = $("#dataSetY").val();
 			    subsystem = $("#subsystemY").val();
 			    $("#varsY").prop("disabled",false);
 			    $("#varsY").empty();
 			    name="";
-			    name=getCollectionName(dataSet,subsystem);
+			    name=getCollectionName(dataSetY,subsystem);
 			    console.log("Y collection : "+name);
 			    $.each(collections[name], function (i, c) {
 				    $.each(c.files, function(j, item){
@@ -313,12 +322,12 @@ $(document).ready(
 		    });
 		$("#subsystemX").change(
 		    function () {
-			dataSet = $("#dataSet").val();
+			dataSetX = $("#dataSetX").val();
 			subsystem = $(this).val();
 			$("#varsX").prop("disabled",false);
 			$("#varsX").empty();
 			name="";
-			name=getCollectionName(dataSet,subsystem);
+			name=getCollectionName(dataSetX,subsystem);
 			console.log("X collection : "+name);
 			$.each(collections[name], function (i, c) {
 				$.each(c.files, function(j, item){
@@ -330,12 +339,12 @@ $(document).ready(
 		    });
 		$("#subsystemY").change(
 		    function () {
-			dataSet = $("#dataSet").val();
+			dataSetY = $("#dataSetY").val();
 			subsystem = $(this).val();
 			$("#varsY").prop("disabled",false);
 			$("#varsY").empty();
 			name="";
-			name=getCollectionName(dataSet,subsystem);
+			name=getCollectionName(dataSetY,subsystem);
 			console.log("Y collection : "+name);
 			$.each(collections[name], function (i, c) {
 				$.each(c.files, function(j, item){
@@ -351,13 +360,14 @@ $(document).ready(
 				year = $("#year").val();
 				subsystemX = $("#subsystemX").val();
 				subsystemY = $("#subsystemY").val();
-				dataSet = $("#dataSet").val();
+				dataSetX = $("#dataSetX").val();
+				dataSetY = $("#dataSetY").val();
 				varX = $("#varsX").val();
 				varY = $("#varsY").val();
-				if (year == "" || dataSet=="" || subsystemX == "" || subsystemY == "") {
+				if (year == "" || dataSetX=="" || dataSetY=="" || subsystemX == "" || subsystemY == "") {
 					alert("Please Make Selection");
 				} else {
-  				        update_url(dataSet,subsystemX,subsystemY, year);
+  				        update_url(dataSetX,subsystemX,dataSetY,subsystemY, year);
 					console.log("update_url executed.............");
 					load_dataset(varX,varY);
 				}
